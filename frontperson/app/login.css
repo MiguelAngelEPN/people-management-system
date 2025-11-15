@@ -1,0 +1,79 @@
+/* CONTENEDOR PRINCIPAL */
+.loginContainer {
+    height: 100vh;
+    width: 100%;
+    background: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TARJETA DEL LOGIN */
+.loginCard {
+    background: var(--color-bg-secondary);
+    padding: 3rem 2.5rem;
+    border-radius: var(--radius-lg);
+    width: 380px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+/* TÍTULO */
+.loginTitle {
+    color: var(--color-text);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* INPUTS Y LABELS */
+.loginInputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.loginLabel {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.loginInput {
+    padding: 0.8rem;
+    border-radius: var(--radius-md);
+    border: 1px solid #333;
+    background: #131416;
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.loginInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: #18191d;
+}
+
+/* BOTÓN */
+.buttonLogin {
+    padding: 0.9rem;
+    border-radius: var(--radius-md);
+    background: var(--color-primary);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 1;
+}
+
+.buttonLogin:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+}
+
+.buttonLogin:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background: #334;
+}

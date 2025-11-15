@@ -1,26 +1,118 @@
 @import "tailwindcss";
 
+/* Usa tu paleta */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-bg: #0e0f11;
+  --color-bg-secondary: #1a1c20;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-primary: #4f7cff;
+  --color-primary-hover: #7da0ff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-accent: #00e5aa;
+  --color-accent-hover: #4fffd0;
+
+  --color-text: #e5e9f0;
+  --color-text-secondary: #a9b1ba;
+
+  --color-danger: #ff4f4f;
+
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --transition: 0.25s ease;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
 }
+
+/* Layout container */
+.layoutContainer {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 190px;
+  background: var(--color-bg-secondary);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 1px solid #1f2227;
+}
+
+.sidebarLogo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebarLink {
+  padding: 5px 5px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  background: transparent;
+  transition: var(--transition);
+}
+
+.sidebarLink:hover {
+  background: var(--color-primary-hover);
+  color: #fff;
+}
+
+/* Header superior */
+.header {
+  height: 60px;
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #1f2227;
+}
+
+.headerTitle {
+  font-size: 20px;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.headerUser {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+/* Contenido principal */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageInner {
+  padding: 24px;
+}
+
+.sidebarLinkActive {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  padding: 5px 5px;
+}
+

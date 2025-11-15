@@ -1,65 +1,140 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
+import Cookies from "js-cookie";
+import "./login.css";
+import { showToast } from "@/Component/Sweetalert/notification";
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
+
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+  const validateEmail = (value: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  };
+
+  const validatePassword = (value: string) => {
+    return /^[a-zA-Z0-9@#$%^&+=!._-]{6,50}$/.test(value);
+  };
+
+  const isValid =
+    validateEmail(email) &&
+    validatePassword(password);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!isValid) {
+      showToast({
+        icon: "error",
+        message: "Ingrese datos válidos.",
+      });
+      return;
+    }
+
+    try {
+      const response = await fetch(`${apiUrl}/Authentication`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const json = await response.json();
+
+      if (!response.ok || json.code !== 200) {
+        showToast({
+          icon: "error",
+          message: json.message || "Credenciales incorrectas.",
+        });
+        return;
+      }
+
+      const data = json.data;
+
+      if (!data || !data.token) {
+        showToast({
+          icon: "error",
+          message: "Error: token no recibido.",
+        });
+        return;
+      }
+
+      // ============================
+      // GUARDAR TODO EN COOKIES
+      // ============================
+
+      Cookies.set("token", data.token, { expires: 7 });
+      Cookies.set("userGuid", data.userGuid, { expires: 7 });
+      Cookies.set("username", data.username, { expires: 7 });
+      Cookies.set("email", data.email, { expires: 7 });
+      Cookies.set("role", data.role.toString(), { expires: 7 });
+      
+      await fetch("/api/auth/set-cookies", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          token: data.token,
+          role: data.role,
+        }),
+      });
+
+      showToast({
+        icon: "success",
+        message: json.message,
+        duration: 1500,
+      });
+
+      setTimeout(() => {
+        router.push('./person/list');
+      }, 1600);
+
+    } catch (error) {
+      showToast({
+        icon: "error",
+        message: "No se pudo conectar con el servidor.",
+      });
+    }
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="loginContainer">
+      <form className="loginCard" onSubmit={handleSubmit}>
+        <h2 className="loginTitle">Bienvenido</h2>
+
+        <div className="loginInputGroup">
+          <label className="loginLabel">Email</label>
+          <input
+            type="email"
+            className="loginInput"
+            placeholder="email@dominio.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value.trim())}
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="loginInputGroup">
+          <label className="loginLabel">Contraseña</label>
+          <input
+            type="password"
+            className="loginInput"
+            placeholder="********"
+            maxLength={50}
+            value={password}
+            onChange={(e) => setPassword(e.target.value.trim())}
+          />
+          <small style={{ fontSize: "12px", color: "#aaa" }}>
+            Permitidos: letras, números y @#$%^&+=!._-
+          </small>
         </div>
-      </main>
+
+        <button type="submit" disabled={!isValid} className="buttonLogin">
+          Iniciar sesión
+        </button>
+      </form>
     </div>
   );
 }

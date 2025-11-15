@@ -1,0 +1,90 @@
+.listContainer {
+    padding: 20px;
+    color: var(--color-text);
+}
+
+.titlePage {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.filtersRow {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.inputFilter {
+    padding: 10px;
+    background: var(--color-bg-secondary);
+    color: var(--color-text);
+    border-radius: var(--radius-md);
+    border: 1px solid #333;
+    transition: var(--transition);
+}
+
+.inputFilter:focus {
+    border-color: var(--color-primary);
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.customTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-bg-secondary);
+}
+
+.customTable th {
+    background: var(--color-primary);
+    padding: 12px;
+    text-align: left;
+}
+
+.customTable td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.loadingRow,
+.emptyRow {
+    text-align: center;
+    padding: 20px;
+    color: var(--color-text-secondary);
+}
+
+.paginationRow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btnPagination {
+    padding: 10px 16px;
+    background: var(--color-primary);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btnPagination:hover {
+    background: var(--color-primary-hover);
+}
+
+.btnPagination:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pageNumber {
+    color: var(--color-text-secondary);
+}
+
+.btnDisabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

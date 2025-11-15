@@ -59,13 +59,14 @@ builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 //----------------------------- condigurar cors
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularClient",
+    options.AddPolicy("AllowAll",
         policy => policy
-            .WithOrigins("http://localhost:4200")
+            .WithOrigins("http://localhost:3000")
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials()
-    );
+        );
+
 });
 //------------------------------------------------
 
@@ -77,10 +78,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("AllowAngularClient");
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication(); // ? FALTABA
 app.UseAuthorization();
 
 app.MapControllers();
