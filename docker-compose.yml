@@ -37,15 +37,18 @@ services:
       -i /init.sql
 
   backend:
-  backend:
     container_name: user-api
     build:
       context: ./UserServiceAPI
       dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_URLS: "http://0.0.0.0:8080"
+      ConnectionStrings__CadenaSQL: "Server=sqlserver-udla,1433;Database=UdlaDB;User Id=SA;Password=Yoz0id3An0!;TrustServerCertificate=True;"
     ports:
-      - "5161:5161"
-
-
+      - "7000:8080"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
 
   frontend:
     build:
@@ -53,11 +56,11 @@ services:
       dockerfile: Dockerfile
     container_name: next-frontend
     environment:
-      NEXT_PUBLIC_API_URL: "http://localhost:5161"
-    depends_on:
-      - backend
+      NEXT_PUBLIC_API_URL: "http://backend:7000"
     ports:
       - "3000:3000"
+    depends_on:
+      - backend
 
 volumes:
   mssql_data:

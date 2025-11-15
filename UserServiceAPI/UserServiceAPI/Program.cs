@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -9,6 +9,7 @@ using UserServiceAPI.Models;
 using UserServiceAPI.Service;
 
 var builder = WebApplication.CreateBuilder(args);
+
 //-------------------------conexion a base de datos
 builder.Services.AddDbContext<AppDbContext>(o =>
 {
@@ -43,46 +44,48 @@ builder.Services.AddAuthentication(options =>
         )
     };
 });
-
 //-------------------------------------------------
-// Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 //----------------------------- importar servicios
 builder.Services.AddScoped<IPersonService, PersonService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 //------------------------------------------------
 
-//----------------------------- condigurar cors
+//----------------------------- configurar CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
         policy => policy
-            .WithOrigins("http://localhost:3000")
+            .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .AllowCredentials()
-        );
-
+    );
 });
 //------------------------------------------------
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+//------------------------------------------------
+//  QUITAMOS la condición "solo Development"
+// PARA QUE SWAGGER FUNCIONE TAMBIÉN EN DOCKER
+//------------------------------------------------
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "User API V1");
+    c.RoutePrefix = "swagger"; // Siempre disponible en /swagger
+});
+
 app.UseCors("AllowAll");
 
-app.UseHttpsRedirection();
+// Evitar problema de https en Docker
+//app.UseHttpsRedirection();
 
-app.UseAuthentication(); // ? FALTABA
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

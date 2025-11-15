@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|c:\\users\\usuario\\documents\\profecional\\pruebastecnicas\\csharpudla\\people-management-system\\userserviceapi\\userserviceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|solutionrelative:userserviceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|c:\\users\\usuario\\documents\\profecional\\pruebastecnicas\\csharpudla\\people-management-system\\userserviceapi\\userserviceapi\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|solutionrelative:userserviceapi\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,19 +31,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Program.cs",
+              "RelativeDocumentMoniker": "UserServiceAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Program.cs",
+              "RelativeToolTip": "UserServiceAPI\\Program.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAD8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T13:17:07.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Service\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "UserServiceAPI\\Service\\AuthenticationService.cs",
               "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Service\\AuthenticationService.cs",
               "RelativeToolTip": "UserServiceAPI\\Service\\AuthenticationService.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAGoAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-15T08:42:07.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PersonController.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Controllers\\PersonController.cs",
               "RelativeDocumentMoniker": "UserServiceAPI\\Controllers\\PersonController.cs",
@@ -47,12 +64,11 @@
               "RelativeToolTip": "UserServiceAPI\\Controllers\\PersonController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T08:10:05.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T08:10:05.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PersonService.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Service\\PersonService.cs",
               "RelativeDocumentMoniker": "UserServiceAPI\\Service\\PersonService.cs",
@@ -60,8 +76,7 @@
               "RelativeToolTip": "UserServiceAPI\\Service\\PersonService.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAABUAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T07:23:21.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T07:23:21.982Z"
             }
           ]
         }

@@ -96,6 +96,30 @@ Agregar una foto del usuario es útil en sistemas como:
 - Credential stuffing
 - Hash comparison attacks
 
+## 👥 Usuarios de prueba
+
+Estos usuarios están disponibles para realizar pruebas de autenticación y roles dentro del sistema.
+
+### User 1
+- **Email:** `carlos.perez@example.com`
+- **Password:** `miguelnew%F`
+- **Rol:** Admin
+
+### User 2
+- **Email:** `maria.lopez@example.com`
+- **Password:** `coder!V8t`
+- **Rol:** User
+
+### User 3
+- **Email:** `juan.garcia@example.com`
+- **Password:** `alpha$M3g`
+- **Rol:** User
+
+### User 4
+- **Email:** `luisa.martinez@example.com`
+- **Password:** `newton%Q7z`
+- **Rol:** User
+
 
 ## 🚀 Formas de arrancar el proyecto
 
@@ -112,11 +136,15 @@ Promero descargar no clonar el repositorio
    - Docker Compose
    - Puerto: 3000 disponible
    - Puerto: 1433 disponible
-   - Puerto: 5161 disponible
+   - Puerto: 7000 disponible
 
-3. **Cómo ejecutarlo**
+3. **Cómo ejecutar todo el proyecto**
    ```bash
    docker compose up --build
+
+front: http://localhost:3000
+apis: http://localhost:7000/swagger/index.html
+
 
 ### ✅ Forma 2: Ejecutar sin docker.
 #### ✅ Ejecutar el Backend manualmente (.NET 8)
