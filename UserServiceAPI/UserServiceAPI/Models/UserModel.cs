@@ -24,10 +24,9 @@ namespace UserServiceAPI.Models
         public string Username { get; set; } = string.Empty;
 
         [Required]
-        public byte[] PasswordHash { get; set; }
+        public string PasswordHash { get; set; }
 
-        [Required]
-        public byte[] PasswordSalt { get; set; }
+        public string PasswordSalt { get; set; }
 
         [Required]
         [ForeignKey("Role")]

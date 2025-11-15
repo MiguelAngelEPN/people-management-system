@@ -103,7 +103,7 @@ namespace UserServiceAPI.Controllers
             }
         }
 
-        [HttpDelete()]
+        [HttpDelete("{userGuid}")]
         public async Task<IActionResult> DeleteAsync([FromRoute]Guid userGuid)
         {
             try

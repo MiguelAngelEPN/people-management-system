@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "UserServiceAPI.Controllers.AuthenticationController",
+    "Method": "LogIn",
+    "RelativePath": "Authentication",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtoLogIn",
+        "Type": "UserServiceAPI.Dtos.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "UserServiceAPI.Controllers.PersonController",
     "Method": "RegisterAsync",
     "RelativePath": "Person",
@@ -48,22 +64,6 @@
   },
   {
     "ContainingType": "UserServiceAPI.Controllers.PersonController",
-    "Method": "DeleteAsync",
-    "RelativePath": "Person",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userGuid",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "UserServiceAPI.Controllers.PersonController",
     "Method": "UpdateAsync",
     "RelativePath": "Person/{userGuid}",
     "HttpMethod": "PUT",
@@ -88,6 +88,22 @@
     "Method": "GetByGuidAsync",
     "RelativePath": "Person/{userGuid}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userGuid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserServiceAPI.Controllers.PersonController",
+    "Method": "DeleteAsync",
+    "RelativePath": "Person/{userGuid}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

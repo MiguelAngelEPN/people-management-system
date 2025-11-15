@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(o =>
 
 //-------------------------Configurar Identity para usar PasswordHasher
 builder.Services.AddScoped<IPasswordHasher<UserModel>, PasswordHasher<UserModel>>();
+builder.Services.AddScoped<IPasswordHasher<AuthenticationService>, PasswordHasher<AuthenticationService>>();
 //-------------------------------------------------
 
 //-------------------------Configurar JWT
@@ -34,12 +35,15 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = "TuIssuer",
-        ValidAudience = "TuAudience",
+
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes("TuClaveSecretaSuperLarga"))
+            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])
+        )
     };
 });
+
 //-------------------------------------------------
 // Add services to the container.
 
@@ -49,6 +53,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //----------------------------- importar servicios
 builder.Services.AddScoped<IPersonService, PersonService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 //------------------------------------------------
 
 //----------------------------- condigurar cors

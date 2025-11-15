@@ -80,8 +80,9 @@ BEGIN
         UserGuid UNIQUEIDENTIFIER NOT NULL,
         PersonId INT NOT NULL,
         Username NVARCHAR(100) NOT NULL,
-        PasswordHash VARBINARY(MAX) NOT NULL,
-        PasswordSalt VARBINARY(MAX) NOT NULL,
+        -- HASH DE ASP.NET IDENTITY (NO NECESITA SALT)
+        PasswordHash NVARCHAR(MAX) NOT NULL,
+        PasswordSalt NVARCHAR(MAX) NULL,
         RoleId INT NOT NULL,
         IsActive BIT NOT NULL DEFAULT 1,
         CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
@@ -133,10 +134,10 @@ BEGIN
 
     INSERT INTO Users (UserGuid, PersonId, Username, PasswordHash, PasswordSalt, RoleId, IsActive)
     VALUES
-    (NEWID(), 1, 'carlosUser', 0x0101, 0x0202, 1, 1),
-    (NEWID(), 2, 'mariaUser', 0x0101, 0x0202, 2, 1),
-    (NEWID(), 3, 'juanUser', 0x0101, 0x0202, 2, 1),
-    (NEWID(), 4, 'luisaUser', 0x0101, 0x0202, 2, 1);
+    (NEWID(), 1, 'carlosUser', 'AQAAAAIAAYagAAAAED1OsVLjniIkSCOcC2PQJHEJ4hUPvbwt4tr2iPnw0QswtBGEr7z2YMWNMnoFWlwRNQ==', 0x0202, 1, 1),
+    (NEWID(), 2, 'mariaUser', 'AQAAAAIAAYagAAAAEC925lMsRUMH8uC9vOmkwMojxfsMQkINPRakYUIa2SBgQyeYCMUqFtxYpFUS/IN/4g==', 0x0202, 2, 1),
+    (NEWID(), 3, 'juanUser', 'AQAAAAIAAYagAAAAEHgFMN5etq2si7z1Cm48Ez7LKhr5mZnV3l+S1M9Zg+sMQD966XUMVgZ931Xm5JrDuw==', 0x0202, 2, 1),
+    (NEWID(), 4, 'luisaUser', 'AQAAAAIAAYagAAAAELDfclN44AHmj8pYMQ+XPhq9cPjygJD/c6pGlvD52QDsrvLmEHcUIhNcvIfAbHbyqg==', 0x0202, 2, 1);
 END
 ELSE
 BEGIN

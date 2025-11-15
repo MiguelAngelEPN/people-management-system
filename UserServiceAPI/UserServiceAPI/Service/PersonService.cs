@@ -127,7 +127,8 @@ namespace UserServiceAPI.Service
                     Username = userDto.Username,
                     RoleId = userDto.RoleId,
                     IsActive = userDto.IsActive,
-                    CreatedAt = DateTime.UtcNow
+                    CreatedAt = DateTime.UtcNow,
+                    PasswordSalt = ""
                 };
 
                 // GENERAR HASH DE CONTRASEÑA
@@ -136,8 +137,7 @@ namespace UserServiceAPI.Service
 
                 // Guardamos el hash completo en PasswordHash
                 // Como IPasswordHasher NO usa salt separado, lo incluimos todo en PasswordHash
-                user.PasswordHash = System.Text.Encoding.UTF8.GetBytes(hashedPassword);
-                user.PasswordSalt = new byte[0]; // ya no se usa porque el hash de Identity lo incluye todo internamente
+                user.PasswordHash = hashedPassword;
 
                 _appDbContext.Users.Add(user);
                 await _appDbContext.SaveChangesAsync();
@@ -234,8 +234,14 @@ namespace UserServiceAPI.Service
                 }
 
                 // ----------- EMAIL DUPLICADO
+                // ----------- EMAIL DUPLICADO
+                var normalizedEmail = dto.Email.Trim().ToLower();
+
                 var emailExists = await _appDbContext.Person
-                    .AnyAsync(p => p.Email == dto.Email && p.PersonId != person.PersonId);
+                    .AnyAsync(p =>
+                        p.Email.ToLower() == normalizedEmail &&
+                        p.PersonId != person.PersonId
+                    );
 
                 if (emailExists)
                 {
@@ -247,6 +253,7 @@ namespace UserServiceAPI.Service
                         Data = null
                     };
                 }
+
 
                 // ----------- USERNAME DUPLICADO
                 var usernameExists = await _appDbContext.Users
@@ -269,7 +276,7 @@ namespace UserServiceAPI.Service
                 // ----------- ACTUALIZAR PERSON
                 person.FirstName = dto.FirstName;
                 person.LastName = dto.LastName;
-                person.Email = dto.Email;
+                person.Email = normalizedEmail;
                 person.CountryCode = dto.CountryCode;
                 person.PhoneNumber = dto.PhoneNumber;
                 person.Age = dto.Age;
@@ -324,6 +331,7 @@ namespace UserServiceAPI.Service
                 };
             }
         }
+
         public async Task<ApiResponse> GetByGuidAsync(Guid userGuid)
         {
             try
@@ -481,11 +489,13 @@ namespace UserServiceAPI.Service
         {
             try
             {
+                Console.WriteLine("userGuid--->" + userGuid);
                 // 1. Buscar el usuario por GUID
                 var user = await _appDbContext.Users
                     .Include(u => u.Person)
                     .FirstOrDefaultAsync(u => u.UserGuid == userGuid);
 
+                Console.WriteLine("user--->" + user);
                 if (user == null)
                 {
                     return new ApiResponse
