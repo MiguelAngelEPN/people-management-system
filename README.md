@@ -129,8 +129,8 @@ Promero descargar no clonar el repositorio
 3. **Cómo ejecutarlo**
 
    ```bash
-cd UserServiceAPI/UserServiceAPI
-dotnet run
+   cd UserServiceAPI/UserServiceAPI
+   dotnet run
 
 #### ✅ jecutar el Frontend manualmente (Next.js)
 1. **Ejecuta el proyecto frontperson**
@@ -142,14 +142,14 @@ dotnet run
 3. **Cómo ejecutarlo en modo desarrollo**
 
    ```bash
-cd frontperson
-npm install
-npm run dev
+   cd frontperson
+   npm install
+   npm run dev
 
 4. **Cómo ejecutarlo en modo produccipón**
    ```bash
-npm run build
-npm run start
+   npm run build
+   npm run start
 
 
 #### ✅ Baase de datos:

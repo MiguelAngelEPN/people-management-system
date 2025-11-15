@@ -37,14 +37,13 @@ services:
       -i /init.sql
 
   backend:
+  backend:
     container_name: user-api
     build:
       context: ./UserServiceAPI
       dockerfile: Dockerfile
     ports:
       - "5161:5161"
-    environment:
-      ASPNETCORE_URLS: "http://0.0.0.0:5161"
 
 
 
