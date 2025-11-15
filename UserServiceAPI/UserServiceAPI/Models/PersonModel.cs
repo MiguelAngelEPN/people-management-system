@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UserServiceAPI.Models
 {
+    [Table("Persons")]
     public class PersonModel
     {
         [Key]

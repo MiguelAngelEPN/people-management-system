@@ -15,7 +15,7 @@ namespace UserServiceAPI.InterfaceService
         Task<ApiResponse> GetByGuidAsync(Guid userGuid);
 
         // Obtener todos (GET /users)
-        Task<ApiResponse> GetAllAsync();
+        Task<ApiResponse> GetAllAsync(int page, int pageSize, string? firstName, string? lastName);
 
         // Eliminar por userGuid (DELETE /users/{userGuid})
         Task<ApiResponse> DeleteAsync(Guid userGuid);

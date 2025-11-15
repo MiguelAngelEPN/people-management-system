@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|c:\\users\\usuario\\documents\\profecional\\pruebastecnicas\\csharpudla\\people-management-system\\userserviceapi\\userserviceapi\\service\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|solutionrelative:userserviceapi\\service\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|c:\\users\\usuario\\documents\\profecional\\pruebastecnicas\\csharpudla\\people-management-system\\userserviceapi\\userserviceapi\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|solutionrelative:userserviceapi\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|c:\\users\\usuario\\documents\\profecional\\pruebastecnicas\\csharpudla\\people-management-system\\userserviceapi\\userserviceapi\\interfaceservice\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|solutionrelative:userserviceapi\\interfaceservice\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|c:\\users\\usuario\\documents\\profecional\\pruebastecnicas\\csharpudla\\people-management-system\\userserviceapi\\userserviceapi\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|solutionrelative:userserviceapi\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|c:\\users\\usuario\\documents\\profecional\\pruebastecnicas\\csharpudla\\people-management-system\\userserviceapi\\userserviceapi\\interfaceservice\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|solutionrelative:userserviceapi\\interfaceservice\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|c:\\users\\usuario\\documents\\profecional\\pruebastecnicas\\csharpudla\\people-management-system\\userserviceapi\\userserviceapi\\service\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|solutionrelative:userserviceapi\\service\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|c:\\users\\usuario\\documents\\profecional\\pruebastecnicas\\csharpudla\\people-management-system\\userserviceapi\\userserviceapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBACF499-4720-4EF9-9513-A0808F6F1C2E}|UserServiceAPI\\UserServiceAPI.csproj|solutionrelative:userserviceapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,65 +29,72 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 328,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 485,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IPersonService.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\InterfaceService\\IPersonService.cs",
-              "RelativeDocumentMoniker": "UserServiceAPI\\InterfaceService\\IPersonService.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\InterfaceService\\IPersonService.cs",
-              "RelativeToolTip": "UserServiceAPI\\InterfaceService\\IPersonService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Service\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "UserServiceAPI\\Service\\AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Service\\AuthenticationService.cs",
+              "RelativeToolTip": "UserServiceAPI\\Service\\AuthenticationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T22:53:00.417Z",
+              "WhenOpened": "2025-11-15T02:02:39.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PersonService.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Service\\PersonService.cs",
-              "RelativeDocumentMoniker": "UserServiceAPI\\Service\\PersonService.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Service\\PersonService.cs",
-              "RelativeToolTip": "UserServiceAPI\\Service\\PersonService.cs",
+              "Title": "IAuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\InterfaceService\\IAuthenticationService.cs",
+              "RelativeDocumentMoniker": "UserServiceAPI\\InterfaceService\\IAuthenticationService.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\InterfaceService\\IAuthenticationService.cs",
+              "RelativeToolTip": "UserServiceAPI\\InterfaceService\\IAuthenticationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T22:52:56.78Z",
+              "WhenOpened": "2025-11-15T02:02:18.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPersonService.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\InterfaceService\\IPersonService.cs",
+              "RelativeDocumentMoniker": "UserServiceAPI\\InterfaceService\\IPersonService.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\InterfaceService\\IPersonService.cs",
+              "RelativeToolTip": "UserServiceAPI\\InterfaceService\\IPersonService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T01:04:47.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "UserServiceAPI\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "UserServiceAPI\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T22:50:20.109Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 324,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "PersonController.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Controllers\\PersonController.cs",
               "RelativeDocumentMoniker": "UserServiceAPI\\Controllers\\PersonController.cs",
               "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Controllers\\PersonController.cs",
               "RelativeToolTip": "UserServiceAPI\\Controllers\\PersonController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAACEAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAG4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T22:49:39.661Z",
+              "WhenOpened": "2025-11-15T00:02:20.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonService.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Service\\PersonService.cs",
+              "RelativeDocumentMoniker": "UserServiceAPI\\Service\\PersonService.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\PROFECIONAL\\PruebasTecnicas\\csharpudla\\people-management-system\\UserServiceAPI\\UserServiceAPI\\Service\\PersonService.cs",
+              "RelativeToolTip": "UserServiceAPI\\Service\\PersonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T22:52:56.78Z",
               "EditorCaption": ""
             }
           ]

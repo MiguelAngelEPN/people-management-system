@@ -5,6 +5,7 @@ using System;
 
 namespace UserServiceAPI.Models
 {
+    [Table("Users")]
     public class UserModel
     {
         [Key]
